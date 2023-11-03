@@ -5,7 +5,7 @@ import React from "react";
 const Contact = () =>{
     return(
         <div className="min-h-screen">
-        <h2>Contact</h2>
+        <h2 className="mb-8 text-2xl">Contact</h2>
        </div>
     )
 }

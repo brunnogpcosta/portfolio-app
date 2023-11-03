@@ -32,6 +32,18 @@ const About = () =>{
                         </label>
                         <p>Me tornar referência no mundo da programação, fazendo parte de projetos que revolucionem o mundo. </p>
                     </div>
+
+                    <div className="mb-2">
+                        <label className="font-bold">
+                            Em que me formei?
+                        </label>
+                        <ul className=" ml-4">
+                            <li className="list-disc">Tecnólogo em Análise e Desenvolvimento de Sistemas na UNIGRANRIO, concluído em Junho de 2022.</li>
+                            <li className="list-disc">Ciência da Computação na UNICARIOCA, 5 períodos concluídos (Trancado).</li>
+                            <li className="list-disc">Ensino Médio - Técnico em Eletrônica na FAETEC, concluído em 2012.</li>
+                        </ul>
+                       
+                    </div>
                 </div>
          </div>
   
