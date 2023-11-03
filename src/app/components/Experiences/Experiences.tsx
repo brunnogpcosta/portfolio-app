@@ -1,13 +1,86 @@
-import React from "react";
+import React, { useState } from "react";
+import Image from "next/image";
 
+const experiencesData = [
+  {
+    empresa: "PLOORAL",
+    cargo: "Desenvolvedor Fullstack Javascript (Agosto/2022 - Maio/2023)",
+    atividades:
+      "Desenvolvimento de aplicações web utilizando as tecnologias HTML, CSS, JAVASCRIPT, BOOTSTRAP, SQL, ANGULARJS, VUEJS e NODEJS. Criação de interfaces responsivas e intuitivas utilizando HTML, CSS e BOOTSTRAP. Implementação de lógica de negócio e interatividade utilizando JAVASCRIPT e frameworks como ANGULARJS e VUEJS. Integração com bancos de dados SQL para armazenamento e recuperação de dados. Desenvolvimento de APIs e serviços utilizando Node.js para comunicação entre front-end e back-end.",
+    logo: "/plooral-logo.png"
+    },
+  {
+    empresa: "SOTREQ S/A",
+    cargo: "Analista de Sistemas (Março/2020 - Agosto/2022)",
+    atividades:
+      "Gestão de consultorias e projetos, acompanhamento e atendimento de chamados, desenvolvimento interno com as seguintes tecnologias: POWER AUTOMATE, POWER APPS, SHAREPOINT, JAVASCRIPT, NODE, HTML, CSS, POWERSHELL, NODE para geração de indicadores, criação de programas e melhoria em processos.",
+      logo: "/sotreq-logo.jpg"
+    },
+  {
+    empresa: "BNDES",
+    cargo: "Estagiário de Análise de Sistemas (junho/2019 - Novembro/2019)",
+    atividades:
+      "Manutenção no site (INTRANET) chamado Catálogo Corporativo de Dados, utilizando JAVASCRIPT, JAVA, ANGULAR, GIT, TYPESCRIPT, SHELL, SQL como principais tecnologias. Extraia informações do banco de dados e apresentava em site de modo que a consulta pudesse ser feita por qualquer pessoa, independente de conhecimentos técnicos.",
+      logo: "/bndes-logo.png"
+    },
+];
 
-const Experiences = () =>{
-    return(
-        <div className="min-h-screen">
-        <h2>Experiences</h2>
-       </div>
-    )
-}
+const Experiences = () => {
+  const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
+  const handleNextCard = () => {
+    setCurrentCardIndex((prevIndex) =>
+      prevIndex < experiencesData.length - 1 ? prevIndex + 1 : 0,
+    );
+  };
 
-export default Experiences
+  const handlePrevCard = () => {
+    setCurrentCardIndex((prevIndex) =>
+      prevIndex > 0 ? prevIndex - 1 : experiencesData.length - 1,
+    );
+  };
+
+  return (
+    <div className="min-h-screen">
+      <h2 className="mb-8 text-2xl">Experiências</h2>
+
+      <div className="flex">
+        <button
+          className="text-3xl p-4 z-10 relative right-10"
+          onClick={handlePrevCard}
+        >
+          &#8249;
+        </button>
+
+        <div className="bg-slate-500 p-4 rounded-md min-w-full relative right-10">
+          <div className="flex">
+            <div className=" flex justify-center items-center mr-4">
+              <Image
+                src={experiencesData[currentCardIndex].logo}
+                width={300}
+                height={300}
+                alt={""}
+                style={{ borderRadius: 8 }}
+              />
+            </div>
+
+            <div className="w-full">
+              <h3>Empresa: {experiencesData[currentCardIndex].empresa}</h3>
+              <p>Função: {experiencesData[currentCardIndex].cargo}</p>
+              <p>Atividades: {experiencesData[currentCardIndex].atividades}</p>
+            </div>
+          </div>
+        </div>
+
+        <button
+          className="text-3xl p-4 z-10 relative right-10"
+          onClick={handleNextCard}
+        >
+          &#8250;
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Experiences;
