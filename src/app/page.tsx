@@ -9,6 +9,7 @@ import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Carousel from "./components/Carousel/Carousel";
 
 
 export default function Home() {
@@ -44,7 +45,7 @@ const menuClick = (item: string) =>{
         className="flex items-center justify-center"
         style={{ minHeight: `calc(100vh - 220px)` }}
       >
-        <h2 className="text-2xl">Portifolio Oficial</h2>
+       <Carousel/>
       </div>
 
       <div id="sobre">

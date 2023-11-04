@@ -7,7 +7,7 @@ interface IHeader {
 const Header: React.FC<IHeader> = ({ changeMenu }) => {
   return (
     <header>
-      <div className="w-full mb-4">
+      <div className="w-full mb-8">
         <div className="flex justify-between items-center ">
           <h1 className="flex text-2xl">Brunno Costa</h1>
 
