@@ -29,13 +29,7 @@ const Tecnologies = () => {
     {
       id: 5,
       image: "/react-verde.png",
-      title: "ReactJs",
-      flipped: false,
-    },
-    {
-      id: 6,
-      image: "/react-verde.png",
-      title: "React native",
+      title: "React e React Native",
       flipped: false,
     },
     {
