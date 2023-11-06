@@ -33,35 +33,38 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       <h2 className="mb-8 text-2xl">Contato</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {cards.map((card) => (
-          <div
-            key={card.id}
-            className={`mb-8 ${card.flipped ? "flipped" : ""}`}
-          >
-          
-              <div className="p-4 rounded">
-              <a
-              href={card.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none", color: "inherit" }}
+      <div className="">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {cards.map((card) => (
+            <div
+              key={card.id}
+              className={`mb-8 ${card.flipped ? "flipped" : ""}`}
             >
-                <div className="bg-green-400 h-[200px] rounded-md flex justify-center items-center cursor-pointer ">
-                  {card.image}
+            
+                <div className="p-4 rounded">
+                <a
+                href={card.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                  <div className="bg-green-400 h-[200px] rounded-md flex justify-center items-center cursor-pointer ">
+                    {card.image}
+                  </div>
+                  </a>
+                  <h3 className="mt-2 font-bold">{card.title}</h3>
+                  <p className=" mt-2 flex w-full border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+                    <code className="font-mono font-bold overflow-auto no-scrollbar lg:pl-0 pl-4">
+                      {card.description}
+                    </code>
+                  </p>
                 </div>
-                </a>
-                <h3 className="mt-2 font-bold">{card.title}</h3>
-                <p className=" mt-2 flex w-full border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-                  <code className="font-mono font-bold overflow-auto no-scrollbar">
-                    {card.description}
-                  </code>
-                </p>
-              </div>
-   
-          </div>
-        ))}
+    
+            </div>
+          ))}
+        </div>
       </div>
+
     </div>
   );
 };

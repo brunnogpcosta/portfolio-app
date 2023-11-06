@@ -56,7 +56,7 @@ const Tecnologies = () => {
   return (
     <div className="min-h-screen">
       <h2 className="mb-8 text-2xl">Tecnologias</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {cards.map((card) => (
           <div key={card.id} className={`mb-8 ${card.flipped ? "flipped" : ""}`}>
             <div className="p-4 rounded">
@@ -64,7 +64,7 @@ const Tecnologies = () => {
                 <img src={card.image} alt={card.title} style={{ borderRadius: "8px", width: "100%", height: "100%" }} />
               </a>
               <h3 className="mt-2">{card.title}</h3>
-              <p>{card.title}</p>
+              {/* <p>{card.title}</p> */}
             </div>
           </div>
         ))}

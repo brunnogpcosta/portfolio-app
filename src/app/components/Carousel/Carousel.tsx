@@ -40,8 +40,9 @@ const Carousel: React.FC= () => {
             <img
               src={images[currentImage]}
               alt="Carousel Image"
-              className="w-full h-full object-cover cursor-pointer"
-              onClick={() => expandImage(images[currentImage])}
+              className="w-full h-full object-cover cursor-pointer rounded-md"
+              onClick={() => expandImage(images[currentImage])
+              }
             />
           </div>
           {expandedImage && (
@@ -50,7 +51,7 @@ const Carousel: React.FC= () => {
                 <img
                   src={expandedImage}
                   alt="Expanded Image"
-                  className="max-w-full max-h-full"
+                  className="max-w-full max-h-full rounded-md"
         
                 />
               </div>

@@ -53,21 +53,35 @@ const Experiences = () => {
         </button>
 
         <div className="bg-slate-500 p-4 rounded-md min-w-full relative right-10">
-          <div className="flex">
+          <div className="flex flex-col lg:flex-row">
             <div className=" flex justify-center items-center mr-4">
-              <Image
-                src={experiencesData[currentCardIndex].logo}
-                width={300}
-                height={300}
-                alt={""}
-                style={{ borderRadius: 8 }}
-              />
+              <img src={experiencesData[currentCardIndex].logo} alt={experiencesData[currentCardIndex].empresa} style={{ borderRadius: "8px", width: "100%", height: "100%" }} />
             </div>
 
-            <div className="w-full">
-              <h3>Empresa: {experiencesData[currentCardIndex].empresa}</h3>
-              <p>Função: {experiencesData[currentCardIndex].cargo}</p>
-              <p>Atividades: {experiencesData[currentCardIndex].atividades}</p>
+            <div className="w-full lg:mt-0 mt-4">
+              <div className="mb-2">
+                <label className="font-bold">
+                Empresa
+                </label>
+                <h3>{experiencesData[currentCardIndex].empresa}</h3>
+              </div>
+
+
+              <div className="mb-2">
+                <label className="font-bold">
+                Função
+                </label>
+                <p>{experiencesData[currentCardIndex].cargo}</p>
+              </div>
+        
+              <div className="mb-2">
+                <label className="font-bold">
+                Atividades
+                </label>
+   
+                <p>{experiencesData[currentCardIndex].atividades}</p>
+              </div>
+  
             </div>
           </div>
         </div>

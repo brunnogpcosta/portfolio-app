@@ -38,7 +38,7 @@ const menuClick = (item: string) =>{
 
 
   return (
-    <main className="p-8 pl-24 pr-24">
+    <main className="p-8">
       <Header changeMenu={ (value: string) => menuClick(value)}/>
 
       <div
