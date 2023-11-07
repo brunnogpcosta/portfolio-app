@@ -38,7 +38,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen mt-4">
       <h2 className="mb-8 text-2xl">{`Projetos (${projects.length})`}</h2>
 
       <div className="flex">

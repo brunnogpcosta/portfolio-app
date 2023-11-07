@@ -3,27 +3,6 @@ import Image from "next/image";
 
 const About = () => {
 
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight
-  });
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight
-      });
-    }
-
-    window.addEventListener("resize", handleResize);
-
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <div className="min-h-screen mb-8">
       <h2 className="mb-8 text-2xl">Sobre</h2>
@@ -35,7 +14,7 @@ const About = () => {
           width={300}
           height={300}
           priority
-          style={{ borderRadius: 8, borderColor: "#fff", borderWidth: 2, borderStyle: "solid" ,   width: windowSize.width < 768 ? "100%" : 300, height: "100%" }}        />
+          style={{ borderRadius: 8, borderColor: "#fff", borderWidth: 2, borderStyle: "solid" ,   width: "100%", maxWidth: 600, height: "100%" }}        />
 
         <div className="lg:ml-8">
           <div className="mb-2 lg:mt-0 mt-2">
