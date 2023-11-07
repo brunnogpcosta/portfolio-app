@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import './Experience.css'
 
 const experiencesData = [
   {
@@ -55,7 +56,7 @@ const Experiences = () => {
         <div className="bg-slate-500 p-4 rounded-md min-w-full relative right-10">
           <div className="flex flex-col lg:flex-row">
             <div className=" flex justify-center items-center mr-4">
-              <img src={experiencesData[currentCardIndex].logo} alt={experiencesData[currentCardIndex].empresa} style={{ borderRadius: "8px", width: "100%", height: "100%" }} />
+              <img src={experiencesData[currentCardIndex].logo} alt={experiencesData[currentCardIndex].empresa} style={{ borderRadius: "8px", width: "100%", height: "100%", maxWidth: 500 }} />
             </div>
 
             <div className="w-full lg:mt-0 mt-4">
@@ -85,13 +86,22 @@ const Experiences = () => {
             </div>
           </div>
         </div>
-
         <button
           className="text-3xl p-4 z-10 relative right-10"
           onClick={handleNextCard}
         >
           &#8250;
         </button>
+      </div>
+
+      <div className="position-indicators">
+        {experiencesData.map((_, index) => (
+          <div
+            key={index}
+            className={`position-indicator ${index === currentCardIndex ? 'active' : ''}`}
+            onClick={() => setCurrentCardIndex(index)}
+          />
+        ))}
       </div>
     </div>
   );
