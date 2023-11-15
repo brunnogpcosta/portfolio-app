@@ -43,6 +43,17 @@ const About = () => {
               <li className="list-disc">Ensino Médio - Técnico em Eletrônica na FAETEC, concluído em 2012.</li>
             </ul>
           </div>
+
+          
+          <div className="mb-2">
+            <label className="font-bold">
+              Quais sites eu tenho?
+            </label>
+            <ul className=" ml-4">
+              <li className="list-disc"><a href="https://www.pregarei.com/" target="_blank">Pregarei.com</a></li>
+              <li className="list-disc"><a href="https://bibleconvert.com/" target="_blank">Bibleconvert.com</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
