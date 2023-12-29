@@ -24,9 +24,9 @@ const Header: React.FC<IHeader> = ({ changeMenu }) => {
           </div>
 
           <div className="flex items-center justify-between">
-            <button className="bg-[#15d47b] p-2 rounded-md text-black font-bold flex items-center justify-center">
+            <a href="/curriculum/brunno_cv.pdf" download="brunno_cv" className="bg-[#15d47b] p-2 rounded-md text-black font-bold flex items-center justify-center">
               <FaDownload className="mr-2"/>
-              Baixar CV</button>
+              Baixar CV</a>
           </div>
 
         </div>
