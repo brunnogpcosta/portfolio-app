@@ -23,13 +23,20 @@ const Header: React.FC<IHeader> = ({ changeMenu }) => {
             </button>
           </div>
 
-          <div className="flex items-center justify-between">
+          <div className="sm:flex items-center justify-between hidden">
             <a href="/curriculum/brunno_cv.pdf" download="brunno_cv" className="bg-[#15d47b] p-2 rounded-md text-black font-bold flex items-center justify-center">
-              <FaDownload className="mr-2"/>
+              <FaDownload className="mr-2" />
               Baixar CV</a>
           </div>
 
         </div>
+
+        <div className="flex items-center justify-between sm:hidden w-full mt-6">
+          <a href="/curriculum/brunno_cv.pdf" download="brunno_cv" className="w-full bg-[#15d47b] p-2 rounded-md text-black font-bold flex items-center justify-center">
+            <FaDownload className="mr-2" />
+            Baixar CV</a>
+        </div>
+
       </div>
       <ul
         className={`lg:flex lg:justify-between ${isMenuOpen ? "block" : "hidden"
