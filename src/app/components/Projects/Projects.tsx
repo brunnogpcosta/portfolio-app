@@ -38,17 +38,16 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="min-h-screen mt-4">
-      <h2 className="mb-8 text-2xl">{`Projetos (${projects.length})`}</h2>
+    <div className="mb-8">
+      <h2 className="mb-4 text-2xl">{`Projetos (${projects.length})`}</h2>
 
       <div className="flex">
         <button
-          className="text-3xl p-4 z-10 relative right-10"
+          className="text-3xl p-4 z-10 relative left-[3px] rounded-s-md  bg-black bg-opacity-10"
           onClick={handlePrevCard}
         >
           &#8249;
         </button>
-
         <div className="bg-slate-500 p-4 rounded-md min-w-full relative right-10">
           {projects[currentCardIndex] && (
             <a href={projects[currentCardIndex].html_url} target="_blank">
@@ -84,7 +83,7 @@ const Projects = () => {
         </div>
 
         <button
-          className="text-3xl p-4 z-10 relative right-10"
+          className="text-3xl p-4 z-10 relative right-[83px] rounded-e-md  bg-black bg-opacity-10"
           onClick={handleNextCard}
         >
           &#8250;

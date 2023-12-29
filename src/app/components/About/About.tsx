@@ -4,17 +4,17 @@ import Image from "next/image";
 const About = () => {
 
   return (
-    <div className="min-h-screen mb-8">
-      <h2 className="mb-8 text-2xl">Sobre</h2>
+    <div className="mb-8">
+      <h2 className="mb-4 text-2xl">Sobre</h2>
 
       <div className="flex flex-col lg:flex-row">
         <Image
           src="/eu-executivo.jpg"
           alt="Next.js Logo"
-          width={300}
-          height={300}
+          width={200}
+          height={200}
           priority
-          style={{ borderRadius: 8, borderColor: "#fff", borderWidth: 2, borderStyle: "solid" ,   width: "100%", maxWidth: 600, height: "100%" }}        />
+          style={{ borderRadius: 8, borderColor: "#fff", borderWidth: 2, borderStyle: "solid" ,   width: "100%", maxWidth: 400, height: "100%" }}        />
 
         <div className="lg:ml-8">
           <div className="mb-2 lg:mt-0 mt-2">

@@ -42,12 +42,13 @@ const Experiences = () => {
   };
 
   return (
-    <div className="min-h-screen">
-      <h2 className="mb-8 text-2xl">Experiências</h2>
+    <div className="mb-8">
+      <h2 className="mb-4 text-2xl">Experiências</h2>
 
       <div className="flex">
+
         <button
-          className="text-3xl p-4 z-10 relative right-10"
+          className="text-3xl p-4 z-10 relative left-[3px] rounded-s-md bg-black bg-opacity-10"
           onClick={handlePrevCard}
         >
           &#8249;
@@ -87,7 +88,7 @@ const Experiences = () => {
           </div>
         </div>
         <button
-          className="text-3xl p-4 z-10 relative right-10"
+          className="text-3xl p-4 z-10 relative right-[83px] rounded-e-md  bg-black bg-opacity-10"
           onClick={handleNextCard}
         >
           &#8250;

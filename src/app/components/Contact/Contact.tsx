@@ -31,24 +31,24 @@ const Contact = () => {
   ]);
 
   return (
-    <div className="min-h-screen">
-      <h2 className="mb-8 text-2xl">Contato</h2>
+    <div>
+      <h2 className="mb-4 text-2xl">Contato</h2>
       <div className="">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {cards.map((card) => (
             <div
               key={card.id}
               className={`mb-8 ${card.flipped ? "flipped" : ""}`}
             >
             
-                <div className="p-4 rounded">
+                <div className="rounded">
                 <a
                 href={card.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ textDecoration: "none", color: "inherit" }}
               >
-                  <div className="bg-green-400 h-[200px] rounded-md flex justify-center items-center cursor-pointer ">
+                  <div className="bg-[#15d47b] h-[200px] rounded-md flex justify-center items-center cursor-pointer ">
                     {card.image}
                   </div>
                   </a>

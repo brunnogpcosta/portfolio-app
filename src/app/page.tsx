@@ -3,7 +3,6 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
-import Image from "next/image";
 import Header from "./components/Header/Header";
 import About from "./components/About/About";
 import Tecnologies from "./components/Tecnologies/Tecnologies";
@@ -13,6 +12,8 @@ import Contact from "./components/Contact/Contact";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Carousel from "./components/Carousel/Carousel";
+import MoveUpButton from "./components/MoveUpButton/MoveUpButton";
+
 
 export default function Home() {
   const router = useRouter();
@@ -69,12 +70,12 @@ export default function Home() {
   });
 
   return (
-    <main className="p-8">
+    <main className="p-8 font-roboto">
       <Header changeMenu={(value: string) => menuClick(value)} />
 
       <div
         className="flex items-center justify-center"
-        style={{ minHeight: `calc(100vh - 220px)` }}
+    
       >
         <Carousel />
       </div>
@@ -98,6 +99,8 @@ export default function Home() {
       <animated.div ref={contactRef} id="contato" style={contactAnimation}>
         <Contact />
       </animated.div>
+
+      <MoveUpButton/>
     </main>
   );
 }
