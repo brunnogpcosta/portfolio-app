@@ -27,10 +27,10 @@ const MoveUpButton = () => {
     }, []);
 
     return (
-        <div className={`w-full fixed  bottom-0 py-8  ${isVisible ? 'visible' : 'hidden'}`}>
-            <div className="w-full flex justify-center items-center mt-8">
+        <div className={`w-full fixed bottom-0 py-8  flex justify-center ${isVisible ? 'visible' : 'hidden'}`}>
+            <div className="">
                 <button
-                    className="bg-[#15d47b] mt-8 w-16 h-16 rounded-full shadow-lg flex items-center justify-center"
+                    className="bg-[#2fac71] w-16 h-16 rounded-full shadow-lg flex items-center justify-center"
                     onClick={handleMoveUp}
                 >
                     <FaArrowUp size="25" />

@@ -75,7 +75,7 @@ export default function Home() {
 
       <div
         className="flex items-center justify-center"
-    
+
       >
         <Carousel />
       </div>
@@ -99,8 +99,12 @@ export default function Home() {
       <animated.div ref={contactRef} id="contato" style={contactAnimation}>
         <Contact />
       </animated.div>
-
-      <MoveUpButton/>
+      
+      <div
+        className="flex items-center justify-center"
+      >
+        <MoveUpButton />
+      </div>
     </main>
   );
 }
