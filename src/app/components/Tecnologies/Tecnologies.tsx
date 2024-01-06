@@ -54,7 +54,7 @@ const Tecnologies = () => {
   ]);
 
   return (
-    <div className="mb-8">
+    <div className=" p-8 sm:px-28 mb-8">
       <h2 className="mb-4 text-2xl">Tecnologias</h2>
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
         {cards.map((card) => (

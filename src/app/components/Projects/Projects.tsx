@@ -38,8 +38,8 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="mb-8">
-      <h2 className="mb-4 text-2xl">{`Projetos (${projects.length})`}</h2>
+    <div className="py-20 p-8 sm:px-28 mb-8 bg-[#0f0f0f]">
+        <h2 className="font-bold mb-2 text-xl">{`Projetos (${projects.length})`}</h2>
 
       <div className="flex">
         <button
@@ -63,7 +63,7 @@ const Projects = () => {
                 </div> */}
 
                 {projects[currentCardIndex].name && (
-                  <div className="w-full">
+                  <div className="w-full mx-9">
                     <div className="mb-2">
                       <label className="font-bold">Nome</label>
                       <p>{capitalizeWords(projects[currentCardIndex].name)}</p>

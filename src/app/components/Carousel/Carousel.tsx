@@ -33,7 +33,7 @@ const Carousel: React.FC= () => {
   }, [currentImage]);
 
   return (
-    <div className="w-full mb-8">
+    <div className="p-8 sm:px-28 w-full mb-8">
       <div className="w-full mx-auto">
         <div className="relative">
           <div className="relative h-64 md:h-96">

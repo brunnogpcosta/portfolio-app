@@ -13,6 +13,8 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Carousel from "./components/Carousel/Carousel";
 import MoveUpButton from "./components/MoveUpButton/MoveUpButton";
+import Intro from "./components/Intro/Intro";
+import Works from "./components/Works/Works";
 
 
 export default function Home() {
@@ -42,6 +44,7 @@ export default function Home() {
   const [experiencesRef, experiencesInView] = useInView();
   const [projectsRef, projectsInView] = useInView();
   const [contactRef, contactInView] = useInView();
+  const [workRef, workInView] = useInView();
 
   // Define animações para as seções
   const aboutAnimation = useSpring({
@@ -69,37 +72,48 @@ export default function Home() {
     transform: contactInView ? "translateX(0)" : "translateX(-100px)",
   });
 
+  const workAnimation = useSpring({
+    opacity: workInView ? 1 : 0,
+    transform: workInView ? "translateX(0)" : "translateX(-100px)",
+  });
+
   return (
-    <main className="p-8 font-roboto">
+    <main className="font-roboto">
       <Header changeMenu={(value: string) => menuClick(value)} />
 
-      <div
+      <Intro />
+      {/* <div
         className="flex items-center justify-center"
 
       >
         <Carousel />
-      </div>
+      </div> */}
 
       <animated.div ref={aboutRef} id="sobre" style={aboutAnimation}>
         <About />
       </animated.div>
 
-      <animated.div ref={technologiesRef} id="tecnologias" style={technologiesAnimation}>
+      {/* <animated.div ref={technologiesRef} id="tecnologias" style={technologiesAnimation}>
         <Tecnologies />
+      </animated.div> */}
+      
+      <animated.div ref={projectsRef} id="projetos" style={projectsAnimation}>
+        <Works />
       </animated.div>
 
       <animated.div ref={experiencesRef} id="experiencias" style={experiencesAnimation}>
         <Experiences />
-      </animated.div>
+      </animated.div> 
 
-      <animated.div ref={projectsRef} id="projetos" style={projectsAnimation}>
+      {/* <animated.div ref={projectsRef} id="projetos" style={projectsAnimation}>
         <Projects />
-      </animated.div>
+      </animated.div> */}
 
-      <animated.div ref={contactRef} id="contato" style={contactAnimation}>
+
+      <animated.div ref={workRef} id="contato" style={workAnimation}>
         <Contact />
       </animated.div>
-      
+
       <div
         className="flex items-center justify-center"
       >

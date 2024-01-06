@@ -1,59 +1,104 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
+const skills = [
+
+]
+
 const About = () => {
+  const [cards] = useState([
+    {
+      id: 1,
+      image: "/html-verde.png",
+      title: "HTML5",
+      link: "https://dev.w3.org/html5/spec-LC/",
+      flipped: false,
+    },
+    {
+      id: 2,
+      image: "/css-verde.png",
+      title: "CSS",
+      link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+      flipped: false,
+    },
+    {
+      id: 12,
+      image: "/css-verde.png",
+      title: "Tailwind",
+      link: "https://tailwindui.com/S",
+      flipped: false,
+    },
+    {
+      id: 3,
+      image: "/js-verde.png",
+      title: "Javascript",
+      link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      flipped: false,
+    },
+    {
+      id: 4,
+      image: "/ts-verde.png",
+      title: "Typescript",
+      link: "https://www.typescriptlang.org/docs/",
+      flipped: false,
+    },
+    {
+      id: 9,
+      image: "/react-verde.png",
+      title: "NextJs",
+      link: "https://nextjs.org/docs",
+      flipped: false,
+    },
+    
+    {
+      id: 5,
+      image: "/react-verde.png",
+      title: "ReactJs",
+      link: "https://react.dev/",
+      flipped: false,
+    },
+    {
+      id: 20,
+      image: "/react-verde.png",
+      title: " React Native",
+      link: "https://react.dev/",
+      flipped: false,
+    },
+    {
+      id: 7,
+      image: "/node-verde.png",
+      title: "NodeJs",
+      link: "https://nodejs.org/en/docs",
+      flipped: false,
+    },
+    {
+      id: 10,
+      image: "/node-verde.png",
+      title: "ExpressJs",
+      link: "https://expressjs.com/pt-br/starter/installing.html",
+      flipped: false,
+    },
+    {
+      id: 8,
+      image: "/sql-verde.png",
+      title: "Banco de Dados",
+      link: "https://www.alura.com.br/artigos/sql-nosql-bancos-relacionais-nao-relacionais",
+      flipped: false,
+    },
+  ]);
 
   return (
-    <div className="mb-8">
-      <h2 className="mb-4 text-2xl">Sobre</h2>
+    <div className="min-h-screen flex items-center p-8 sm:px-28 mb-8 bg-[#0f0f0f]">
 
-      <div className="flex flex-col lg:flex-row">
-        <Image
-          src="/eu-executivo.jpg"
-          alt="Next.js Logo"
-          width={200}
-          height={200}
-          priority
-          style={{ borderRadius: 8, borderColor: "#fff", borderWidth: 2, borderStyle: "solid" ,   width: "100%", maxWidth: 400, height: "100%" }}        />
+      <div className="mb-2 lg:mt-0 mt-2">
+        <h2 className="font-bold mb-2 text-xl">Sobre mim</h2>
+        <p className="mb-4 text-3xl font-bold bg-gradient-to-r from-[#15d47b] to-[#a4ffd5] text-transparent bg-clip-text">Brunno Costa </p>
+        <p className="text-slate-400"> Desenvolvedor fullstack que quer se tornar referência no mundo da programação, fazendo parte de projetos que revolucionem o mundo. </p>
 
-        <div className="lg:ml-8">
-          <div className="mb-2 lg:mt-0 mt-2">
-            <label className="font-bold">
-              Quem sou?
-            </label>
-            <p>Nome: Brunno Costa </p>
-            <p>Idade: {new Date().getFullYear() - 1993} anos </p>
-            <p>Profissão: Programador Fullstack Javascript </p>
-          </div>
-
-          <div className="mb-2">
-            <label className="font-bold">
-              O que busco?
-            </label>
-            <p>Me tornar referência no mundo da programação, fazendo parte de projetos que revolucionem o mundo. </p>
-          </div>
-
-          <div className="mb-2">
-            <label className="font-bold">
-              Em que me formei?
-            </label>
-            <ul className=" ml-4">
-              <li className="list-disc">Tecnólogo em Análise e Desenvolvimento de Sistemas na UNIGRANRIO, concluído em Junho de 2022.</li>
-              <li className="list-disc">Ciência da Computação na UNICARIOCA, 5 períodos concluídos (Trancado).</li>
-              <li className="list-disc">Ensino Médio - Técnico em Eletrônica na FAETEC, concluído em 2012.</li>
-            </ul>
-          </div>
-
-          
-          <div className="mb-2">
-            <label className="font-bold">
-              Quais sites eu tenho?
-            </label>
-            <ul className=" ml-4">
-              <li className="list-disc"><a href="https://www.pregarei.com/" target="_blank">Pregarei.com</a></li>
-              <li className="list-disc"><a href="https://bibleconvert.com/" target="_blank">Bibleconvert.com</a></li>
-            </ul>
-          </div>
+        <div className="flex flex-col sm:flex-row gap-4 mt-4">
+          {cards.map(card => (
+            <a href={card.link} target="_blank" key={card.id}><p className="p-2 bg-[#303439] hover:bg-[#15d47b] rounded-md mr-2">{card.title}</p></a>
+          ))}
         </div>
       </div>
     </div>
