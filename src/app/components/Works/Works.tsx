@@ -55,7 +55,7 @@ const Works = () => {
                 className="mb-2 rounded"
                 src={work.thumbnail}
                 alt={'Imagem de '+ work.title}
-                style={{ width: "100%", height: "200px" }}
+                style={{ width: "100%", height: "250px" }}
               />
               <div className="">
                 <div className="mb-2 font-bold">

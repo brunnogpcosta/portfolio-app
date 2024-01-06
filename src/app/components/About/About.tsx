@@ -88,7 +88,7 @@ const About = () => {
   ]);
 
   return (
-    <div className="min-h-screen flex items-center p-8 sm:px-28 mb-8 bg-[#0f0f0f]">
+    <div className="min-h-screen flex items-center p-8 sm:px-28 mb-8">
 
       <div className="mb-2 lg:mt-0 mt-2">
         <h2 className="font-bold mb-2 text-xl">Sobre mim</h2>

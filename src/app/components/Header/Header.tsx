@@ -69,6 +69,7 @@ const Header: React.FC<IHeader> = ({ changeMenu }) => {
           </li>
         </a>
       </ul>
+      
     </header>
   );
 };
