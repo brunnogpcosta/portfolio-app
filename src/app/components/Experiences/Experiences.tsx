@@ -38,7 +38,7 @@ const experiencesData = [
 
 const Experiences = () => {
   return (
-    <div className="min-h-screen p-8 sm:px-28 mb-8 bg-[#0f0f0f]">
+    <div className="min-h-screen p-8 sm:px-28 mb-8 ">
       <h2 className="font-bold mb-2 text-xl text-left text-white w-full">Experiências</h2>
 
       <div className="py-8">

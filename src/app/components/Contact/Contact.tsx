@@ -41,7 +41,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen  flex flex-col justify-center p-8 sm:px-28 mb-36">
+    <div className="min-h-screen  flex flex-col justify-center p-8 sm:px-28  bg-[#0f0f0f]">
       <h2 className="font-bold mb-2 text-xl">Contato</h2>
 
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-8">

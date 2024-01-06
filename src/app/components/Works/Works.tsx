@@ -43,7 +43,7 @@ const works = [
 
 const Works = () => {
   return (
-    <div className="min-h-screen  p-8 sm:px-28 mb-8">
+    <div className="min-h-screen  p-8 sm:px-28 mb-8 bg-[#0f0f0f]">
       <h2 className="font-bold mb-2 text-xl">{`Projetos`}</h2>
       <p className="text-slate-400 text-justify mb-8">Abaixo destaco alguns dos projetos desenvolvidos por mim..</p>
 
