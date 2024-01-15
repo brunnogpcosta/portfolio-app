@@ -10,11 +10,11 @@ const works = [
     link: "https://www.pregarei.com/"
   },
   {
-    title: "ExtractLight",
+    title: "Emprego Urgente",
     description:
-      "Uma ferramenta eficaz para a gestão do consumo de energia elétrica, permitindo a visualização do consumo por fatura e possibilitando o download de faturas para uma análise mais detalhada.",
-    thumbnail: "/extract-light.png",
-    link: "https://extract-light.vercel.app/"
+      "Plataforma para publicação de vagas e procura de emprego sem enrolação.",
+    thumbnail: "/empregourgente.png",
+    link: "https://www.empregourgente.com.br/"
   },
   {
     title: "BibleConvert",
@@ -22,6 +22,13 @@ const works = [
       "Um site dedicado a facilitar a conversão de medidas bíblicas antigas para as medidas atuais, proporcionando uma compreensão mais clara e contextualizada das referências bíblicas.",
     thumbnail: "/bibleconvert.png",
     link: "https://bibleconvert.com/"
+  },
+  {
+    title: "ExtractLight",
+    description:
+      "Uma ferramenta eficaz para a gestão do consumo de energia elétrica, permitindo a visualização do consumo por fatura e possibilitando o download de faturas para uma análise mais detalhada.",
+    thumbnail: "/extract-light.png",
+    link: "https://extract-light.vercel.app/"
   },
   {
     title: "ABEC",
