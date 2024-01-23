@@ -24,10 +24,17 @@ const works = [
     link: "https://bibleconvert.com/"
   },
   {
+    title: "MotoBuy",
+    description:
+      "Um projeto e-commerce para aquisição de belas motos",
+    thumbnail: "/motobuy.png",
+    link: "https://motobuy-eta.vercel.app/"
+  },
+  {
     title: "ExtractLight",
     description:
-      "Uma ferramenta eficaz para a gestão do consumo de energia elétrica, permitindo a visualização do consumo por fatura e possibilitando o download de faturas para uma análise mais detalhada.",
-    thumbnail: "/extract-light.png",
+      "Uma projeto eficaz para a gestão do consumo de energia elétrica, permitindo a visualização do consumo por fatura e possibilitando o download de faturas para uma análise mais detalhada.",
+    thumbnail: "/extractlight.png",
     link: "https://extract-light.vercel.app/"
   },
   {
